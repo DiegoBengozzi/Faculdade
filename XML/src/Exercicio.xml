@@ -1,1 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<ISBN-typy value="\d{1} - \d{5} - \d{3} - \d{1} | \d{1} - \d{5} - \d{1} | \d{1} - \d{2} - \d{6} - \d{6} - \d{1}"/>
+<livraria>
+	<livro>
+		<titulo></titulo>
+		<autor></autor>
+		<ano></ano>
+		<ISBN></ISBN>
+		<editora></editora>
+	</livro>
+	<livro>
+		<titulo></titulo>
+		<autor></autor>
+		<ano></ano>
+		<ISBN></ISBN>
+		<editora></editora>
+	</livro>
+</livraria>
