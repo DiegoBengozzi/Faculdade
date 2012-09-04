@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/email"
+	xmlns:tns="http://www.example.org/email" elementFormDefault="qualified">
+	<element name="email" type="tns:emailType" />
+
+	<complexType name="emailType">
+		<sequence>
+			<element name="cabecalho" type="tns:cabecalhoType"
+				minOccurs="1" maxOccurs="1" />
+            <element name="corpo" type="tns:corpoType" minOccurs="1"
+				maxOccurs="1" />
+        </sequence>
+	</complexType>
+	
+	<complexType name="cabecalhoType">
+		<sequence>
+			<element name="de" type="tns:enderecoGenericoType" minOccurs="1" maxOccurs="1" />
+			<element name="para" type="tns:enderecoGenericoType" minOccurs="1" maxOccurs="unbounded" />
+			<element name="cc" type="tns:enderecoGenericoType" minOccurs="0" maxOccurs="unbounded" />
+			<element name="assunto" type="string" />
+		</sequence>
+	</complexType>
+
+	<complexType name="corpoType">
+		<sequence>
+			<element name="texto" type="string" />
+			<element name="anexos" type="tns:anexosType" minOccurs="0" maxOccurs="1" />
+		</sequence>
+	</complexType>
+	
+	<complexType name="enderecoGenericoType">
+		<sequence>
+			<element name="endereco" type="string" />
+		</sequence>
+		<attribute name="nome" type="string" />
+	</complexType>
+	
+	<complexType name="anexosType">
+		<sequence>
+			<element name="arquivo" type="tns:arquivoType" minOccurs="0" maxOccurs="unbounded" />
+		</sequence>
+	</complexType>
+	
+	<complexType name="arquivoType">
+		<simpleContent>
+			<extension base="string">
+				<attribute name="tipo" type="string" default="text/plain" />
+			</extension>
+		</simpleContent>
+	</complexType>
+
+</schema>

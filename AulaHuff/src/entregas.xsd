@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/entregas"
+	xmlns:tns="http://www.example.org/entregas" elementFormDefault="qualified">
+
+	<element name="entregas" type="tns:entregasType"></element>
+
+	<complexType name="entregasType">
+		<sequence>
+			<element name="entrega" type="tns:entregaType" maxOccurs="unbounded"
+				minOccurs="1">
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="entregaType">
+		<sequence>
+			<element name="fornecedor" type="tns:fornecedorType"
+				maxOccurs="1" minOccurs="1">
+			</element>
+			<element name="cliente" type="tns:clienteType" maxOccurs="1"
+				minOccurs="1"></element>
+			<element name="enderecoEntrega" type="tns:enderecoType"
+				maxOccurs="unbounded" minOccurs="1"></element>
+			<element name="dataEntrega" type="date" maxOccurs="1"
+				minOccurs="1"></element>
+			<element name="horaEntrega" type="time" maxOccurs="1"
+				minOccurs="0"></element>
+		</sequence>
+		<attribute name="numeroNota" type="int"></attribute>
+	</complexType>
+
+	<complexType name="fornecedorType">
+		<sequence>
+			<element name="nomeFantasia" type="string" maxOccurs="1"
+				minOccurs="1"></element>
+			<element name="cnpj" type="string" maxOccurs="1" minOccurs="1"></element>
+			<element name="endereco" type="tns:enderecoType" maxOccurs="1"
+				minOccurs="1"></element>
+		</sequence>
+		<attribute name="codigo" type="int"></attribute>
+	</complexType>
+
+	<complexType name="enderecoType">
+		<sequence>
+			<element name="bairo" type="string" maxOccurs="1" minOccurs="0"></element>
+			<element name="logradouro" type="string" maxOccurs="1"
+				minOccurs="1"></element>
+			<element name="numero" type="int" maxOccurs="1" minOccurs="1"></element>
+			<element name="complemento" type="string" maxOccurs="1"
+				minOccurs="0"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="clienteType">
+		<sequence>
+			<element name="nome" type="string" maxOccurs="1" minOccurs="1"></element>
+			<element name="cpf" maxOccurs="1" minOccurs="1">
+				<simpleType>
+					<restriction base="string">
+						<pattern value="\d{3}\.\d{3}\.\d{3}-\d{2}"></pattern>
+					</restriction>
+				</simpleType>
+			</element>
+			<element name="endereco" type="tns:enderecoType" maxOccurs="1"
+				minOccurs="1"></element>
+		</sequence>
+	</complexType>
+</schema>

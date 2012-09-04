@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:email xmlns:tns="http://www.example.org/email"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/email email.xsd ">
+	<tns:cabecalho>
+		<tns:de nome="">
+			<tns:endereco></tns:endereco>
+		</tns:de>
+		<tns:para nome="">
+			<tns:endereco></tns:endereco>
+		</tns:para>
+		<tns:cc nome="">
+			<tns:endereco></tns:endereco>
+		</tns:cc>
+		<tns:assunto>assunto</tns:assunto>
+	</tns:cabecalho>
+	<tns:corpo>
+		<tns:texto>texto</tns:texto>
+		<tns:anexos>
+			<tns:arquivo tipo="text/plain">arq.txt</tns:arquivo>
+		</tns:anexos>
+	</tns:corpo>
+</tns:email>

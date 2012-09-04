@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:numeros xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://exemplo.com/numeros numeros.xsd"
+	xmlns:tns="http://exemplo.com/numeros">
+	<tns:numero>0</tns:numero>
+	<tns:numero>1</tns:numero>
+</tns:numeros>

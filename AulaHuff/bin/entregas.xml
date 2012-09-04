@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:entregas xmlns:tns="http://www.example.org/entregas"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/entregas entregas.xsd ">
+	<tns:entrega numeroNota="2350">
+		<tns:fornecedor codigo="4">
+			<tns:nomeFantasia>Empresa do Fornecedor</tns:nomeFantasia>
+			<tns:cnpj>34.456.345.432/0001.45</tns:cnpj>
+			<tns:endereco>
+				<tns:bairo>bairo 1</tns:bairo>
+				<tns:logradouro>logradouro</tns:logradouro>
+				<tns:numero>0</tns:numero>
+				<tns:complemento>complemento</tns:complemento>
+			</tns:endereco>
+		</tns:fornecedor>
+		<tns:cliente>
+			<tns:nome>Paulo</tns:nome>
+			<tns:cpf>044.267.543-76</tns:cpf>
+			<tns:endereco>
+				<tns:bairo>bairo 2</tns:bairo>
+				<tns:logradouro>logradouro</tns:logradouro>
+				<tns:numero>0</tns:numero>
+				<tns:complemento>complemento</tns:complemento>
+			</tns:endereco>
+		</tns:cliente>
+		<tns:enderecoEntrega>
+			<tns:bairo>bairo 3</tns:bairo>
+			<tns:logradouro>logradouro</tns:logradouro>
+			<tns:numero>0</tns:numero>
+			<tns:complemento>complemento</tns:complemento>
+		</tns:enderecoEntrega>
+		<tns:dataEntrega>2001-01-01</tns:dataEntrega>
+		<tns:horaEntrega>12:00:00</tns:horaEntrega>
+	</tns:entrega>
+</tns:entregas>

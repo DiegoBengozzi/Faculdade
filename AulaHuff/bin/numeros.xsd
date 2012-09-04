@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://exemplo.com/numeros" xmlns:tns="http://exemplo.com/numeros"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="numeros" type="tns:quantidadeType" />
+	<xs:complexType name="numeroType">
+		<xs:sequence>
+			<xs:element name="numero" type="tns:algarimosType"
+				minOccurs="0" maxOccurs="2" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="algarimosType">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0" />
+			<xs:maxInclusive value="1" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="quantidadeType">
+		<xs:complexContent>
+			<xs:restriction base="tns:numeroType">
+				<xs:sequence>
+					<xs:element name="numero" type="tns:algarimosType"
+						minOccurs="1" maxOccurs="2" />
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>
